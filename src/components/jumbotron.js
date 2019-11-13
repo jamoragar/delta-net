@@ -16,7 +16,7 @@ const HomeJumbotron = () => {
                             <br/>
                             <p>
                                 <Button className="heroButton btn-lg" variant="primary">
-
+                                    <i className="fas fa-phone"></i>
                                     Quiero Saber Más
                                 </Button>
                             </p>

@@ -13,9 +13,18 @@ const NavigationBar = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="/Nosotros">Nosotros</Nav.Link>
-                        <Nav.Link href="/Servicios">Servicios</Nav.Link>
-                        <Nav.Link href="/Contacto">Contacto</Nav.Link>
+                        <Nav.Link href="/Nosotros">
+                            <i className="fas fa-users"></i>
+                            Nosotros
+                        </Nav.Link>
+                        <Nav.Link href="/Servicios">
+                            <i className="fas fa-network-wired"></i>
+                            Servicios
+                        </Nav.Link>
+                        <Nav.Link href="/Contacto">
+                            <i className="far fa-envelope"></i>
+                            Contacto
+                        </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
 
