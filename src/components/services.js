@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Services = () => {
+    const refran = '{ Revolucionamos la forma en la que Magallanes se conecta. }'
     return (
         <div className='Services'>
             <section className='section-bta'>
@@ -13,6 +14,7 @@ const Services = () => {
                         <hr className='small center' />
                     </div>
                 </div>
+                <p class="refran title-alternative">{refran}</p>
             </section>
         </div>
     )
