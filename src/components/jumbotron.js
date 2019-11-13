@@ -1,6 +1,5 @@
 import React from 'react';
 import {Button} from 'react-bootstrap';
-
 const HomeJumbotron = () => {
     return (
         <div className="hero">
@@ -16,7 +15,10 @@ const HomeJumbotron = () => {
                             </p>
                             <br/>
                             <p>
-                                <Button className="heroButton btn-lg" variant="primary">Quiero Saber Más</Button>
+                                <Button className="heroButton btn-lg" variant="primary">
+
+                                    Quiero Saber Más
+                                </Button>
                             </p>
                         </div>
                     </div>

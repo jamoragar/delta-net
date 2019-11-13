@@ -15,7 +15,6 @@ const NavigationBar = () => {
                     <Nav className="mr-auto">
                         <Nav.Link href="/Nosotros">Nosotros</Nav.Link>
                         <Nav.Link href="/Servicios">Servicios</Nav.Link>
-                        <Nav.Link href="/Especialidades">Especialidades</Nav.Link>
                         <Nav.Link href="/Contacto">Contacto</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

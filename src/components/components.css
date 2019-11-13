@@ -1,9 +1,14 @@
+*{
+    box-sizing: border-box;
+}
+/* ----- NavBar ----- */
 .bg-dark{
     background-color: #000000 !important;
 }
 .Home, ._404{
-    margin: 3% 0 0 0;
+    margin: 2% 0 0 0;
 }
+/* ----- Jumbotron ----- */
 .hero{
     box-sizing: border-box;
     background-image: url(../img/hero_background.jpg);
@@ -52,5 +57,38 @@
 @media (max-width: 450px){
     .hero h1 {
         font-size: 60px;
+    }
+}
+/* ----- Services ----- */
+.Services span{
+    font-family: inherit;
+}
+.section-bta{
+    margin: 5% 0 0 0;
+    padding: 0 8% 0 8%;
+}
+.text-center{
+    font-size: 48px;
+}
+hr.center {
+    margin: 20px auto;
+}
+hr.small {
+    max-width: 100px;
+    border-width: 4px;
+    border-color: #05c9dd;
+    margin-bottom: 30px !important;
+}
+.primary-color {
+    color: #05c9dd !important;
+}
+@media (min-width: 1200px){
+    .col-lg-offset-1 {
+        margin-left: 8.3333333333%;
+    }
+}
+@media (min-width: 1200px){
+    .col-lg-10 {
+        width: 83.3333333333%;
     }
 }
