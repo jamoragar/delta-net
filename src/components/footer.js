@@ -3,14 +3,16 @@ import React from 'react';
 const Footer = () => {
     return (
         <div>
-            <footer className="page-footer font-small cyan darken-3">
-                <div className='container'>
-                    <div className="row">
-                        <div className="col-md-12 py-2">
-                            <div className="mb-4 flex-center">
-                                <br/>
-                                <h3>Contáctanos</h3>
-                            </div>
+            <footer className="container small">
+                <div className="row">
+                    <div className="col-md-12 py-2">
+                        <div className="mb-4 flex-center">
+                            <hr/>
+                            <br/>
+                            <p>DELTA NET</p>
+                            <p>(+56 9) 9381 1278</p>
+                            <p>Punta Arenas</p>
+                            <p>Chile</p>
                         </div>
                     </div>
                 </div>

@@ -4,9 +4,9 @@ const HomeJumbotron = () => {
     return (
         <div className="hero">
             <div className="container-fluid">
-                <div className="container" id="wrapper" style={{height:'620px'}}>
+                <div className="container" id="wrapper">
                     <div className="row">
-                        <div className="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+                        <div className="col-lg-10 col-md-10">
                             <h1>Deja tu proyecto en manos de Delta net</h1>
                             <p>
                                 Años de experiencia brindando servicios
