@@ -9,7 +9,7 @@ import Clients from './clients';
 import Footer from './footer';
 
 
-const Home = () => {
+const Home = (props) => {
     return (
         <div className="Home">
             <HomeJumbotron />

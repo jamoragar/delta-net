@@ -68,12 +68,32 @@ i{
         width: 83.3333333333%;
     }
 }
+/*  Animation  */
+.tracking-in-expand-fwd {
+	animation: tracking-in-expand-fwd 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+@keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
 /* ----- Services ----- */
+.Services{
+  padding: 5rem 0 2rem 0;
+}
 span{
     font-family: inherit;
 }
 .section-bta{
-    margin: 4% 0 4% 0;
     padding: 0 8% 0 8%;
 }
 .refran{
@@ -230,6 +250,17 @@ hr.small {
 .service .cta {
   align-self: flex-end;
 }
+.services_footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+@media all and (max-width:400px){
+  .services_footer{
+    position: relative;
+  }
+}
 
 @media all and (max-width:900px) {
   .services-grid {
@@ -241,9 +272,6 @@ hr.small {
   }
 }
 /* ----- Contacto ----- */
-.Contacto{
-    margin: 5% 0 0 0;
-}
 /* ----- Footer ----- */
 footer{
     margin: 8vh 0 0 0;
@@ -332,6 +360,9 @@ footer{
   } 
 }
 /* ----- Clientes ----- */
+.Clients{
+  padding: 5rem 0 2rem 0;
+}
 .Clients .text-center{
   font-size: 44px;
 }

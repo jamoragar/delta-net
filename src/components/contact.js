@@ -1,67 +1,109 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {Spinner} from 'react-bootstrap';
 import Footer from './footer';
+import axios from 'axios';
+
+const API_PATH = 'http://www.deltanet.cl/api/contact_form/form_submit.php';
 
 
-const Contact = () => {
+const Contact = (props) => {
+    
+    const [btnText, setBtnText] = useState(false);
+    const [emailSended, setEmailSended] = useState(false);
+    
+    let location;
+    Object.keys(props).length === 0 ? location = '' : location = props.location.pathname;
+
+    const ContactFormJSX = () => {
+        return(
+            <div>
+                <div className='Contacto' style={location === '/Contacto' ? {padding: '5rem 0 2rem 0'} : null}>
+                    {location === '/Contacto' ? (
+                    <div>
+                        <h2>Contactanos!</h2>
+                        <span>Resolveremos tus inquietudes a la brevedad.</span>
+                    </div>
+                    )
+                    :
+                    <></>}
+                    
+                    <section className='section-bta'>
+                        <form onSubmit={submitForm}>
+                            <div className="form-row">
+                                <div className="form-group col-md-6">
+                                    <label>Nombre</label>
+                                    <input type="text" className="form-control" name='txt_name' placeholder="Ingrese su Nombre" required/>
+                                </div>
+                                <div className="form-group col-md-6">
+                                    <label>E-mail</label>
+                                    <input type="email" className="form-control" name='txt_email' placeholder="Ingrese su E-mail" required/>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <label>Mensaje</label>
+                                <textarea className="form-control" name='area_message' placeholder="Ingrese su Mensaje" required/>
+                            </div>
+                            <button type="submit" className="btn btn-success btn-block">
+                                {btnText ? <Spinner
+                                    as="span"
+                                    animation="border"
+                                    size="sm"
+                                    role="status"
+                                    aria-hidden="true"
+                                    />: 'Enviar'}
+                            </button>
+                        </form>
+                    </section>
+                </div>
+                {location === '/Contacto' ? <div className='services_footer'><Footer /></div> : <></>}
+            </div>
+        )
+    }
+    const MailSentedJSX = () => {
+        if(location === '/Contacto'){
+            setTimeout(() => {
+                props.history.push('/')
+            }, 3500);
+        }
+        return(
+            <div>
+                <div className='Contacto' style={location === '/Contacto' ? {padding: '5rem 0 2rem 0'} : null}>
+                    <h2 className='tracking-in-expand-fwd'>Email enviado correctamente.</h2>
+                </div>
+            </div>
+        )
+    }
+    
+
+    const submitForm = event => {
+        event.preventDefault();
+    
+        setBtnText(true);
+    
+        const formData = {
+            name: event.target.elements.txt_name.value,
+            email: event.target.elements.txt_email.value,
+            message: event.target.elements.area_message.value
+        }
+    
+        axios({
+            method: 'post',
+            url: `${API_PATH}`,
+            headers: {'content-type': 'application/json'},
+            data: formData
+        }).then(result => {
+    
+            setBtnText(false);
+            setEmailSended(true);
+        })
+    }
+
     return (
-    <div>
-        <div className='Contacto'>
-            <h2>Contactanos!</h2>
-            <span>Resolveremos tus inquietudes a la brevedad.</span>
-            <section className='section-bta'>
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputEmail4">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email" />
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputPassword4">Password</label>
-                            <input type="password" class="form-control" id="inputPassword4" placeholder="Password" />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputAddress">Address</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" />
-                    </div>
-                    <div class="form-group">
-                        <label for="inputAddress2">Address 2</label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputCity">City</label>
-                            <input type="text" class="form-control" id="inputCity" />
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="inputState">State</label>
-                            <select id="inputState" class="form-control">
-                                <option selected>Choose...</option>
-                                <option>...</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-2">
-                            <label for="inputZip">Zip</label>
-                            <input type="text" class="form-control" id="inputZip" />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck" />
-                            <label class="form-check-label" for="gridCheck">
-                                Check me out
-                        </label>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Sign in</button>
-                </form>
-            </section>
+        <div>
+            {emailSended ? <MailSentedJSX /> : <ContactFormJSX />}
         </div>
-        <div style={{bottom:'0', left:'0', right:'0', position:'fixed'}}>
-            <Footer/>
-        </div>
-    </div>
     )
 }
+
 
 export default Contact;
