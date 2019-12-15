@@ -55,7 +55,7 @@ const Contact = (props) => {
                         </form>
                     </section>
                 </div>
-                {location === '/Contacto' ? <div className='services_footer'><Footer /></div> : <></>}
+                {location === '/Contacto' ? <div><br/><br/><br/><Footer /></div> : <></>}
             </div>
         )
     }

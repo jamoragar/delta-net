@@ -16,13 +16,23 @@ const AboutUs = (props) => {
                 <div className="row">
                     <div className="col-lg-7 col-sm-12">
                         <div className="mision-vision">
-                            <h3>Nuestra Misión</h3>
-                            <p className="paragraph">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repudiandae eius porro dolorem deserunt! Placeat animi totam ducimus? Quis accusantium, voluptas rerum ullam perferendis dignissimos aspernatur sit unde minima laboriosam!
-                            </p>
                             <h3>Nuestra Visión</h3>
                             <p className="paragraph">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa delectus officia consequatur ducimus molestias ab, fugiat pariatur animi natus hic. Delectus quisquam facere distinctio eaque eos aut est tempora tempore!
+                                El servicio integral, la calidad y dedicación son pilares fundamentales en nuestra empresa.
+                                Somos una compañía dedicada a las telecomunicaciones, creada y pensada para laborar bajo las
+                                condiciones que la Región de Magallanes requiere, debido a sus diversas particularidades.
+                                Por lo mismo, estamos ubicados en instalaciones propias en la ciudad de Punta Arenas,
+                                ofreciendo todo el que hacer que involucra desde el levantamiento, proyección, diseño
+                                e ingeniería hasta la construcción, instalación y mantención de los servicios, relacionados 
+                                con el área.
+                                <br/>
+                                La zona austral alberga un enorme potencial en este rubro y estamos dispuestos a demostrar que
+                                con la gestión adecuada, todo es posible. Es por esto que un trabajo profesional es la base de
+                                Delta Net, con encargados y trabajadores con años de experiencia a nivel nacional y regional.
+                            </p>
+                            <h3>Nuestra Misión</h3>
+                            <p className="paragraph">
+                            Nuestra misión es ser un puente para las empresas y diversas instituciones, para que logren entablarse en Magallanes. También, trabajamos para que las organizaciones alcancen la tecnología, que sus funciones necesitan, para dar un paso más en la efectividad laboral.
                             </p>
                         </div>
                     </div>
@@ -35,7 +45,7 @@ const AboutUs = (props) => {
                     </div>
                 </div>
             </section>
-            {location === '/Nosotros' ? <div className='services_footer'><Footer /></div> : <></>}
+            {location === '/Nosotros' ? <div><Footer /></div> : <></>}
         </div>
     )
 }
