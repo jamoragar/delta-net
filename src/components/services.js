@@ -5,7 +5,7 @@ import Footer from './footer';
 const Services = (props) => {
     let location;
     Object.keys(props).length === 0 ? location = '' : location = props.location.pathname;
-    const refran = '{ Revolucionamos la forma en la que Magallanes se conecta. }'
+    const refran = '{ Revolucionamos la forma en la que nuestros clientes se conectan. }'
     return (
         <div>
             <div className='Services'>

@@ -5,6 +5,7 @@ import dgac from '../img/dgac.png'
 import gasco from '../img/gasco_magallanes.png'
 import vilicic from '../img/vilicic.png'
 import oviedo from '../img/oviedo.png';
+import aguas_magallanes from '../img/aguas_magallanes.png'
 
 const Clients = () => {
     return (
@@ -42,6 +43,11 @@ const Clients = () => {
                     <div className="card m-3 pl-5 pr-5 border-0">
                         <p className="text-center">
                             <img className="client" src={oviedo} alt="Cliente Oviedo" width="85%" />
+                        </p>
+                    </div>
+                    <div className="card m-3 pl-5 pr-5 border-0">
+                        <p className="text-center">
+                            <img className="client" src={aguas_magallanes} alt="Cliente Aguas Magallanes" width="85%" />
                         </p>
                     </div>
                 </div>

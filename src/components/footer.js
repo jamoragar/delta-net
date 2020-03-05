@@ -10,9 +10,9 @@ const Footer = () => {
                             <hr/>
                             <br/>
                             <p>DELTA NET</p>
+                            <a href="mailto:joyarzo@deltanet.cl"><p>joyarzo@deltanet.cl</p></a>
                             <p>(+56 9) 9381 1278</p>
-                            <p>Punta Arenas</p>
-                            <p>Chile</p>
+                            <p>Punta Arenas, Chile</p>
                         </div>
                     </div>
                 </div>
@@ -22,7 +22,8 @@ const Footer = () => {
 					<div className="row">
 						<div className="col-md-12 ">
 							<div className="text-center text-white">
-								&copy; 2019 DELTA NET. Todos los derechos reservados.
+								&copy; 2020 DELTA NET. Todos los derechos reservados.
+                                <div id="pie">Desarrollado por <a href='https://www.smartapps.cl/' target='_blank' rel="noopener noreferrer"> SmartApps</a></div>
 							</div>
 						</div>
 					</div>
